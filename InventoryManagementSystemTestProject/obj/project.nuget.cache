@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZOtWJh7B+TxE8tyl6wZUgrrO1IYpJ2llYOb0ctOhA4HuO4aF3gzSv1qlhyZYXnVq6HFuy4agcAQab9ny00CcGA==",
+  "dgSpecHash": "Vwq+arwK8SCn5IKh/ayIE2+zGzM4AH+du0aP2ccPLkbkBfyPnRzXXJkpQkfVNvV6B0Y0/hVyBrxIQ1Vgf5VCFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
+  "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",

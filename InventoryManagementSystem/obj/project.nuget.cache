@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pDEPTmD6ZW8e3hKiuNt4VrAQ+KGNOZwSBH9qmacPevzPyOoSh0Pvbos9Vja/wHKc7wEoU/BXJ03J5ukwHNDx5g==",
+  "dgSpecHash": "7Q5SefNkb8OWN49Dre+KjrwosdM44hjX6580EvM8h2Wbt7gs60yyoXBNDviR5Qwz4hdQHlOqVo64nE3YQF13KA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",

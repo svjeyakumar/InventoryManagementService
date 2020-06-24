@@ -11638,11 +11638,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
+      "projectUniqueName": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
       "projectName": "InventoryManagementSystemTestProject",
-      "projectPath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
+      "projectPath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
       "packagesPath": "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystemTestProject\\obj\\",
+      "outputPath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -11662,8 +11662,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {
-              "projectPath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj"
+            "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystem\\InventoryManagementSystem.csproj": {
+              "projectPath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystem\\InventoryManagementSystem.csproj"
             }
           }
         }
