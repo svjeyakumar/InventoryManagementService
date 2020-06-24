@@ -2,70 +2,128 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InventoryManagementSystem.BusinessLayer;
+using InventoryManagementSystem.BusinessLayer.Interface;
 using InventoryManagementSystem.Data;
 using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Repository.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Options;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace InventoryManagementSystem.Controllers
-{
+{    
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController]        
     public class CustomerController : ControllerBase
     {
-        private CustomerDbContext cusdbcon;
-        public CustomerController(CustomerDbContext cusdbcontext)
-        {
-            cusdbcon = cusdbcontext;
-        }
-        // GET: api/<CustomerController>
-        [HttpGet]
-        public IEnumerable<Customer> Get()
-        {
-            return cusdbcon.Customers;
-        }
+        private readonly ICustomerDetails _blCustomerDetails;
+        private readonly IDistributedCache _distributedCache;
+                
+        public CustomerController(ICustomerDetails blCustomerDetails, IDistributedCache distributedCache)
+        {            
+            _blCustomerDetails = blCustomerDetails;
+            _distributedCache = distributedCache;
+        }        
 
-        // GET api/<CustomerController>/5
-        [HttpGet("{id}",Name ="Get")]
-        public Customer Get(int Id)
+        [HttpGet]
+        public ActionResult<Customer> GetCustomerDetails()
         {
-            var Cust = cusdbcon.Customers.Find(Id);
+            List<Customer> cust;
+            string key = "Get Customer details";
+            try
+            {
+                if(string.IsNullOrEmpty(_distributedCache.GetString(key)))
+                {
+                    cust = (List<Customer>)_blCustomerDetails.GetCustomerDetails();
+                    var option = new DistributedCacheEntryOptions();
+                    option.SetSlidingExpiration(TimeSpan.FromMinutes(1));
+                    _distributedCache.SetString(key, System.Text.Json.JsonSerializer.Serialize<List<Customer>>(cust), option);                
+                }
+                else
+                {
+                    cust = System.Text.Json.JsonSerializer.Deserialize<List<Customer>>(_distributedCache.GetString(key));
+                }
+                
+            }
+            catch(StackExchange.Redis.RedisConnectionException)
+            {
+                cust = (List<Customer>)_blCustomerDetails.GetCustomerDetails();
+            }
+            return Ok(cust);
+        }
+        // GET api/<CustomerController>/5
+        [HttpGet("{id:int}")]
+        public ActionResult<Customer> GetCustomerDetails(int Id)
+        {
+            var Cust = _blCustomerDetails.FindCustomerById(Id);
+            if (Cust == null)
+                return NotFound();
             return Cust;
         }
 
         // POST api/<CustomerController>
         [HttpPost]
-        public void Post([FromBody] Customer customer)
+        public ActionResult<Customer> PostCustomerDetails(Customer customer)
         {
-            cusdbcon.Customers.Add(customer);
-            cusdbcon.SaveChanges();
+            try
+            {
+                _blCustomerDetails.AddCustomer(customer);
+                return CreatedAtAction("GetCustomerDetails", new {id = customer.CustomerId }, customer);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Customer customer)
+        public IActionResult PutCustomerDetails(int id, Customer customer)
         {
-            var entity = cusdbcon.Customers.Find(id);
-            entity.CustomerName = customer.CustomerName;
-            entity.CustomerTypeId = customer.CustomerTypeId;
-            entity.Address = customer.Address;
-            entity.City = customer.City;
-            entity.ContactPerson = customer.ContactPerson;
-            entity.State = customer.State;
-            entity.Phone = customer.Phone;
-            entity.Email = customer.Email;
-            entity.Zipcode = customer.Zipcode;
-            cusdbcon.SaveChanges();
+            if(id != customer.CustomerId)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                _blCustomerDetails.EditCustomer(customer);
+            }
+            catch(DbUpdateConcurrencyException)
+            {
+                if (_blCustomerDetails.FindCustomerById(id) == null)
+                {
+                    return NotFound();
+                }
+                else
+                    BadRequest();
+            }
+            return NoContent();
         }
 
         // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<Customer> DeleteCustomer(int id)
         {
-            var customer = cusdbcon.Customers.Find(id);
-            cusdbcon.Customers.Remove(customer);
-            cusdbcon.SaveChanges();
+            try
+            {
+                var Cust = _blCustomerDetails.FindCustomerById(id);
+                if(Cust == null)
+                {
+                    return NotFound();
+                }
+                _blCustomerDetails.RemoveCustomer(id);
+                return Cust;
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }            
         }
     }
 }

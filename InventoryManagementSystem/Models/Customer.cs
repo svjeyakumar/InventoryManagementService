@@ -23,6 +23,11 @@ namespace InventoryManagementSystem.Models
         public string Email { get; set; }
         [Display(Name ="Contact Person")]
         public string ContactPerson { get; set; }   
+        
 
+    }
+    public class CustomerList
+    {
+        public ICollection<Customer> CustomerDetails { get; set; }
     }
 }
