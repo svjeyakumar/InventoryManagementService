@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "OiIUHXTMCW7XWQYQzCKDWfwVhRalWAuIZYY/uNHTJSdtzFjsyH7tMliMNNRT9pjqgqrQ0z6R9ecwJbF647lxDQ==",
+  "dgSpecHash": "Gpe85Nhx57Pz7AifZBdCgbneYhvjsgtOKx9zJkf3I+qyfBwoerUJue8C5tLNFWLWSqD3XkArgv3JVdNU+TlQGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\coverlet.msbuild\\2.9.0\\coverlet.msbuild.2.9.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnet.webapi.webhost\\4.0.20710\\microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512",
