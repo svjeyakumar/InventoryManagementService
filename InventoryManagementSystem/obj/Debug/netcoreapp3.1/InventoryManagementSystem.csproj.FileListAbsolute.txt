@@ -341,6 +341,13 @@ C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagem
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Blob.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Common.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Microsoft.WindowsAzure.Configuration.dll
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.MvcApplicationPartsAssemblyInfo.cache
