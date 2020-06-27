@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Castle.Core.Configuration;
@@ -24,8 +25,8 @@ namespace InventoryManagementSystem.Controllers
             _configuration = configuration;
         }
         [HttpPost]
-        [Route("SaveCustomerDetails")]
-        public async Task<IActionResult> SaveCustomerDetails(IFormFile formFile)
+        [Route("UploadCustomerDetails")]
+        public async Task<IActionResult> UploadCustomerDetails(IFormFile formFile)
         {
             var blobConnectionstring = _configuration["ConnectionString:AzureBlob"];
             if(CloudStorageAccount.TryParse(blobConnectionstring,out CloudStorageAccount cloudStorage))
@@ -36,6 +37,24 @@ namespace InventoryManagementSystem.Controllers
                 var cusBlob = blobContainer.GetBlockBlobReference(formFile.FileName);
                 await cusBlob.UploadFromStreamAsync(formFile.OpenReadStream());
                 return Ok(cusBlob.Uri);
+            }
+            return StatusCode(500);
+        }
+        [HttpGet]
+        [Route("DownloadCustomerDetails")]
+        public async Task<IActionResult> DownloadCustomerDetails(IFormFile formFile)
+        {
+            var blobConnectionstring = _configuration["ConnectionString:AzureBlob"];
+            if (CloudStorageAccount.TryParse(blobConnectionstring, out CloudStorageAccount cloudStorage))
+            {
+                CloudBlobClient blobClient = cloudStorage.CreateCloudBlobClient();
+                CloudBlobContainer blobContainer = blobClient.GetContainerReference("customerdetails");
+                await blobContainer.CreateIfNotExistsAsync();
+                var cusBlob = blobContainer.GetBlockBlobReference(formFile.FileName);
+                MemoryStream memoryStream = new MemoryStream();
+                await cusBlob.DownloadToStreamAsync(memoryStream);
+                Stream stream = cusBlob.OpenReadAsync().Result;
+                return Ok(stream);
             }
             return StatusCode(500);
         }
