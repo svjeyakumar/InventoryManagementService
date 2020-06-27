@@ -7,11 +7,16 @@ using InventoryManagementSystem.BusinessLayer.Interface;
 using InventoryManagementSystem.Data;
 using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Repository.Interface;
+using InventoryManagementSystemRepository.Modules;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Storage.Shared.Protocol;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
+
+
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -34,7 +39,7 @@ namespace InventoryManagementSystem.Controllers
         public ActionResult<Customer> GetCustomerDetails()
         {
             List<Customer> cust;
-            string key = "Get Customer details";
+            string key = Consts.RedisGetCustomer;
             try
             {
                 if(string.IsNullOrEmpty(_distributedCache.GetString(key)))
@@ -73,7 +78,7 @@ namespace InventoryManagementSystem.Controllers
             try
             {
                 _blCustomerDetails.AddCustomer(customer);
-                return CreatedAtAction("GetCustomerDetails", new {id = customer.CustomerId }, customer);
+                return CreatedAtAction(Consts.GetCustomerDetails, new {id = customer.CustomerId }, customer);
             }
             catch(Exception ex)
             {

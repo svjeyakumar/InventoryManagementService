@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5L+4KFszaxEwdMnUmgaP8GrqmeNB7v9faM4Go3mvDsPKGJgqpFkGFq8T/2JrPuJVv+Y+572MUJSvJIbFkWf0Iw==",
+  "dgSpecHash": "uuLNLKdAgyepwKQGXLuO81InNC37TVMggvJeHQu8yXo9UVtdgWgi0xXCd8j6G6UiGB5uWEeKbQbGpb9oRMCW/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,7 @@
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.0\\microsoft.aspnetcore.http.2.2.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
-    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.5\\microsoft.aspnetcore.http.features.3.1.5.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.httpoverrides\\2.2.0\\microsoft.aspnetcore.httpoverrides.2.2.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.httpspolicy\\2.2.0\\microsoft.aspnetcore.httpspolicy.2.2.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.5\\microsoft.aspnetcore.jsonpatch.3.1.5.nupkg.sha512",
