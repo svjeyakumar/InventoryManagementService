@@ -1,5 +1,4 @@
-﻿using InventoryManagementSystem.BusinessLayer;
-using InventoryManagementSystem.Data;
+﻿using InventoryManagementSystem.Data;
 using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace InventoryManagementSystem.Repository
 {

@@ -1,22 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Castle.Core.Logging;
-using InventoryManagementSystem.BusinessLayer;
 using InventoryManagementSystem.BusinessLayer.Interface;
-using InventoryManagementSystem.Data;
 using InventoryManagementSystem.Models;
-using InventoryManagementSystem.Repository.Interface;
 using InventoryManagementSystemRepository.Modules;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.Storage.Shared.Protocol;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-
 
 
 

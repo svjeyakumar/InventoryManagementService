@@ -1,11 +1,8 @@
 ﻿using InventoryManagementSystem.BusinessLayer.Interface;
 using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Repository.Interface;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace InventoryManagementSystem.BusinessLayer
 {
