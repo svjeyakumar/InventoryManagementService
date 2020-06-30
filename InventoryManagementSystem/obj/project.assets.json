@@ -10988,11 +10988,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementService\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
       "projectName": "InventoryManagementSystem",
-      "projectPath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "projectPath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementService\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
       "packagesPath": "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementService\\InventoryManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -11012,8 +11012,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemRepository\\InventoryManagementSystemRepository.csproj": {
-              "projectPath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemRepository\\InventoryManagementSystemRepository.csproj"
+            "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementService\\InventoryManagementSystemRepository\\InventoryManagementSystemRepository.csproj": {
+              "projectPath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementService\\InventoryManagementSystemRepository\\InventoryManagementSystemRepository.csproj"
             }
           }
         }
@@ -11138,6 +11138,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -11146,7 +11152,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   },

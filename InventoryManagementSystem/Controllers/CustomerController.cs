@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Castle.Core.Logging;
 using InventoryManagementSystem.BusinessLayer;
 using InventoryManagementSystem.BusinessLayer.Interface;
 using InventoryManagementSystem.Data;
@@ -13,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Storage.Shared.Protocol;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 
@@ -28,11 +30,13 @@ namespace InventoryManagementSystem.Controllers
     {
         private readonly ICustomerDetails _blCustomerDetails;
         private readonly IDistributedCache _distributedCache;
+        private readonly Microsoft.Extensions.Logging.ILogger _logger;
                 
-        public CustomerController(ICustomerDetails blCustomerDetails, IDistributedCache distributedCache)
+        public CustomerController(ICustomerDetails blCustomerDetails, IDistributedCache distributedCache,ILogger<CustomerController> logger)
         {            
             _blCustomerDetails = blCustomerDetails;
             _distributedCache = distributedCache;
+            _logger = logger;
         }        
 
         [HttpGet]
@@ -42,6 +46,7 @@ namespace InventoryManagementSystem.Controllers
             string key = Consts.RedisGetCustomer;
             try
             {
+                _logger.LogInformation("Get Customer Details Started");
                 if(string.IsNullOrEmpty(_distributedCache.GetString(key)))
                 {
                     cust = (List<Customer>)_blCustomerDetails.GetCustomerDetails();
@@ -57,6 +62,7 @@ namespace InventoryManagementSystem.Controllers
             }
             catch(StackExchange.Redis.RedisConnectionException)
             {
+                _logger.LogInformation("Get Customer details Error");
                 cust = (List<Customer>)_blCustomerDetails.GetCustomerDetails();
             }
             return Ok(cust);
