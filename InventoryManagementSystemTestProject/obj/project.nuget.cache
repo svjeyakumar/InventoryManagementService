@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OsUocHUT1Uvd1IockLYWKbfmmIBHBmRgAaZcFmnKAVgE+EjNOJrzVkpFcm7EJbY6gKWmYTuMbV/LKWs94hAxTQ==",
+  "dgSpecHash": "q/oviXFjR+QL+zrkczxCTpdn2qmfcmP5lff5JCwWDkzGMwiEzM1dQxPhb1EWCNDz6HTbjpVu5uDgiT2H6tEwBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
+  "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\source\\repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\azure.core\\1.2.2\\azure.core.1.2.2.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\azure.storage.blobs\\12.4.4\\azure.storage.blobs.12.4.4.nupkg.sha512",
@@ -271,7 +271,8 @@
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\webactivatorex\\2.0.0\\webactivatorex.2.0.0.nupkg.sha512"
+    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\webactivatorex\\2.0.0\\webactivatorex.2.0.0.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": [
     {
