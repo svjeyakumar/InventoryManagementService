@@ -24,7 +24,7 @@ namespace InventoryManagementSystem
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Configuration = configuration;            
         }
 
         public IConfiguration Configuration { get; }
@@ -38,6 +38,7 @@ namespace InventoryManagementSystem
             services.AddDbContext<CustomerDbContext>(option => option.UseSqlServer(Configuration["ConnectionString:IMSDB"]));
             services.AddScoped<ICustomerDetails, CustomerDetailsBL>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddSingleton<ILog, Logger>();            
             services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = Configuration["ConnectionString:Redis"];
@@ -72,7 +73,7 @@ namespace InventoryManagementSystem
         }
  
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,CustomerDbContext customerDbcontext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,CustomerDbContext customerDbcontext,ILog logger)
         {
             if (env.IsDevelopment())
             {
@@ -88,6 +89,8 @@ namespace InventoryManagementSystem
                 
             });
 
+            app.ConfigureExceptionHandler(logger);
+
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", "Customer API");                
@@ -98,8 +101,7 @@ namespace InventoryManagementSystem
             customerDbcontext.Database.EnsureCreated();
 
             app.UseRouting();
-
-            
+           
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

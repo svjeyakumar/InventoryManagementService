@@ -184,6 +184,10 @@
               "target": "Package",
               "version": "[3.2.3, )"
             },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.6.4, )"
+            },
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.1.58, )"

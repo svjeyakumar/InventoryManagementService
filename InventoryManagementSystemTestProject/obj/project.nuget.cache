@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OsUocHUT1Uvd1IockLYWKbfmmIBHBmRgAaZcFmnKAVgE+EjNOJrzVkpFcm7EJbY6gKWmYTuMbV/LKWs94hAxTQ==",
+  "dgSpecHash": "pdzGYbDH9IfQhPKUxmZqafRSZ5tRs65RjmMLqprI4QfQjh5Crha80/pKFXIOUcNBEyLwI/TSjDxNnSCZZvVsVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ctsdotnetfsd01\\Source\\Repos\\InventoryManagementService\\InventoryManagementSystemTestProject\\InventoryManagementSystemTestProject.csproj",
   "expectedPackageFiles": [
@@ -160,6 +160,8 @@
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\netstandard.library\\2.0.1\\netstandard.library.2.0.1.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\nlog\\4.7.2\\nlog.4.7.2.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\nlog.extensions.logging\\1.6.4\\nlog.extensions.logging.1.6.4.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd01\\.nuget\\packages\\nunit3testadapter\\3.15.1\\nunit3testadapter.3.15.1.nupkg.sha512",

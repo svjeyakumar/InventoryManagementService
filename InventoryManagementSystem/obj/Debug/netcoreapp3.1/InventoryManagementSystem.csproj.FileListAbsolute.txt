@@ -343,9 +343,6 @@ C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagem
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.csprojAssemblyReference.cache
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.AssemblyInfoInputs.cache
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.AssemblyInfo.cs
-C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.csproj.CoreCompileInputs.cache
-C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.RazorAssemblyInfo.cache
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.RazorAssemblyInfo.cs
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.RazorTargetAssemblyInfo.cache
@@ -354,3 +351,9 @@ C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagem
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.pdb
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.genruntimeconfig.cache
 C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\NLog.config
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\obj\Debug\netcoreapp3.1\InventoryManagementSystem.MvcApplicationPartsAssemblyInfo.cache

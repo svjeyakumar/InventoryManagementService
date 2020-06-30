@@ -1,0 +1,8 @@
+﻿   at System.Text.Json.JsonSerializer.Deserialize(String json, Type returnType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at InventoryManagementSystem.Controllers.CustomerController.GetCustomerDetails() in 
+   C:\Users\ctsdotnetfsd01\Source\Repos\InventoryManagementService\InventoryManagementSystem\Controllers\CustomerController.cs:line 49
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, 
+   ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<<InvokeActionMethodAsync>g__Logged|12_1>d.MoveNext()

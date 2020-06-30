@@ -20,13 +20,12 @@ namespace InventoryManagementSystem.Controllers
     {
         private readonly ICustomerDetails _blCustomerDetails;
         private readonly IDistributedCache _distributedCache;
-        private readonly Microsoft.Extensions.Logging.ILogger _logger;
+        
                 
-        public CustomerController(ICustomerDetails blCustomerDetails, IDistributedCache distributedCache,ILogger<CustomerController> logger)
+        public CustomerController(ICustomerDetails blCustomerDetails, IDistributedCache distributedCache)
         {            
             _blCustomerDetails = blCustomerDetails;
-            _distributedCache = distributedCache;
-            _logger = logger;
+            _distributedCache = distributedCache;            
         }        
 
         [HttpGet]
@@ -35,8 +34,7 @@ namespace InventoryManagementSystem.Controllers
             List<Customer> cust;
             string key = Consts.RedisGetCustomer;
             try
-            {
-                _logger.LogInformation("Get Customer Details Started");
+            {                
                 if(string.IsNullOrEmpty(_distributedCache.GetString(key)))
                 {
                     cust = (List<Customer>)_blCustomerDetails.GetCustomerDetails();
@@ -51,8 +49,7 @@ namespace InventoryManagementSystem.Controllers
                 
             }
             catch(StackExchange.Redis.RedisConnectionException)
-            {
-                _logger.LogInformation("Get Customer details Error");
+            {                
                 cust = (List<Customer>)_blCustomerDetails.GetCustomerDetails();
             }
             return Ok(cust);
