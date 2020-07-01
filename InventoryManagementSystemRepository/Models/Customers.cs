@@ -5,25 +5,25 @@ namespace InventoryManagementSystemRepository.Models
 {
     public class Customers
     {
-        public int CustomerId { get; set; }
+        public int CustId { get; set; }
         [Required]
-        public string CustomerName { get; set; }
+        public string CustName { get; set; }
         [Display(Name = "CustomerTypeId")]
-        public int CustomerTypeId { get; set; }
+        public int CustTypeId { get; set; }
         [Display(Name = "Street Address")]
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
+        public string CusAddress { get; set; }
+        public string CusCity { get; set; }
+        public string CusState { get; set; }
         [Display(Name = "Zip Code")]
-        public string Zipcode { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
+        public string CusZipcode { get; set; }
+        public string CustPhone { get; set; }
+        public string CustEmail { get; set; }
         [Display(Name = "Contact Person")]
-        public string ContactPerson { get; set; }
+        public string CustContactPerson { get; set; }
 
 
     }
-    public class CustomerList
+    public class CustList
     {
         public ICollection<Customers> CustomerDetails { get; set; }
     }

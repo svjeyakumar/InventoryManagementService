@@ -2,11 +2,11 @@
 
 namespace InventoryManagementSystemRepository.Models
 {
-    public class CustomersDbContext:DbContext
+    public class CustomerInvoiceDbContext:DbContext
     {
         public DbSet<Customers> Customers { get; set; }
         public DbSet<Users> Users { get; set; }
-        public CustomersDbContext(DbContextOptions<CustomersDbContext> options) : base(options)
+        public CustomerInvoiceDbContext(DbContextOptions<CustomerInvoiceDbContext> options) : base(options)
         {
 
         }

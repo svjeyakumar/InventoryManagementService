@@ -10,8 +10,8 @@ namespace InventoryManagementSystemRepository.Repository
 {
     public class CustomersRepository : ICustomers
     {
-        private readonly CustomersDbContext _customerDBContext;
-        public CustomersRepository(CustomersDbContext cusDbContext)
+        private readonly CustomerInvoiceDbContext _customerDBContext;
+        public CustomersRepository(CustomerInvoiceDbContext cusDbContext)
         {
             _customerDBContext = cusDbContext;
         }
@@ -24,10 +24,10 @@ namespace InventoryManagementSystemRepository.Repository
 
         public void EditInvoice(Customers customer)
         {
-            var cust = _customerDBContext.Customers.AsNoTracking().Where(q => q.CustomerId == customer.CustomerId);
+            var cust = _customerDBContext.Customers.AsNoTracking().Where(q => q.CustId == customer.CustId);
             foreach (var cus in cust)
             {
-                if ((customer.CustomerId == cus.CustomerId))
+                if ((customer.CustId == cus.CustId))
                 {
                     _customerDBContext.Customers.Remove(cus);
                 }
@@ -44,7 +44,7 @@ namespace InventoryManagementSystemRepository.Repository
 
         public Customers FindInvoiceById(int Id)
         {
-            var findcustomer = _customerDBContext.Customers.AsNoTracking().Where(p => p.CustomerId == Id).FirstOrDefault();
+            var findcustomer = _customerDBContext.Customers.AsNoTracking().Where(p => p.CustId == Id).FirstOrDefault();
             return findcustomer;
         }
 
@@ -55,7 +55,7 @@ namespace InventoryManagementSystemRepository.Repository
 
         public void RemoveInvoice(int Id)
         {
-            var removeCustomer = _customerDBContext.Customers.Where(c => c.CustomerId == Id).FirstOrDefault();
+            var removeCustomer = _customerDBContext.Customers.Where(c => c.CustId == Id).FirstOrDefault();
             _customerDBContext.Customers.Remove(removeCustomer);
             _customerDBContext.SaveChanges();
         }

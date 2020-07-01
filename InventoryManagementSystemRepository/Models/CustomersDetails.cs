@@ -4,9 +4,9 @@ namespace InventoryManagementSystemRepository.Models
 {
     public class Customersdetails
     {
-        public int CustomerId { get; set; }
-        public string Filepath { get; set; }
-        public IFormFile fileImage { get; set; }
+        public int CustomerTypeId { get; set; }
+        public string CustFilepath { get; set; }
+        public IFormFile CustfileImage { get; set; }
 
     }
 }

@@ -5,10 +5,10 @@ namespace InventoryManagementSystemRepository.Models
     public class Users
     {
         [Key]
-        public int Id { get; set; }
+        public int UId { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string UserName { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string UserPassword { get; set; }
     }
 }
