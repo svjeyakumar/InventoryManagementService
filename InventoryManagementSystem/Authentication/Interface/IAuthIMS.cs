@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace InventoryManagementSystem.Authentication.Interface
 {
-    public interface IAuthIMS
+    public interface IAuthIms
     {
         string Authenticate(string name, string password);
     }

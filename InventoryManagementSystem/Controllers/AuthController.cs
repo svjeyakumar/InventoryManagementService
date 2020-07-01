@@ -18,9 +18,9 @@ namespace InventoryManagementSystem.Controllers
     public class AuthController : ControllerBase
     {
         private readonly CustomerDbContext _cusDbContext;
-        private readonly IAuthIMS _authIMS;
+        private readonly IAuthIms _authIMS;
 
-        public AuthController(CustomerDbContext cuDbContext,IAuthIMS iauth)
+        public AuthController(CustomerDbContext cuDbContext,IAuthIms iauth)
         {
             _cusDbContext = cuDbContext;
             _authIMS = iauth;

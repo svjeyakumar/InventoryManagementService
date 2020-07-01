@@ -2,11 +2,9 @@
 using InventoryManagementSystemRepository.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace InventoryManagementSystemRepository.Repository
 {

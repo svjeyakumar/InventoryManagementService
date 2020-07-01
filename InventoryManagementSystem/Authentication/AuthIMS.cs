@@ -8,10 +8,10 @@ using System.Text;
 
 namespace InventoryManagementSystem.Authentication
 {
-    public class AuthenticationIMS : IAuthIMS
+    public class AuthIMS : IAuthIms
     {
         private readonly string _key;
-        public AuthenticationIMS(string key)
+        public AuthIMS(string key)
         {
             _key = key;
         }

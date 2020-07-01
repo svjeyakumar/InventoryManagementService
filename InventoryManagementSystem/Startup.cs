@@ -33,8 +33,7 @@ namespace InventoryManagementSystem
         public void ConfigureServices(IServiceCollection services)
         {
             string key = "JeyakumarIMS";
-            services.AddControllers();
-            //services.AddDbContext<CustomerDbContext>(option => option.UseSqlServer(@"Data Source=DOTNETFSD01;Initial Catalog=CustomerDb;Integrated Security=True;"));
+            services.AddControllers();            
             services.AddDbContext<CustomerDbContext>(option => option.UseSqlServer(Configuration["ConnectionString:IMSDB"]));
             services.AddScoped<ICustomerDetails, CustomerDetailsBL>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
@@ -69,7 +68,7 @@ namespace InventoryManagementSystem
                     };
                 }
                 );
-            services.AddSingleton<IAuthIMS>(new AuthenticationIMS(key));
+            services.AddSingleton<IAuthIms>(new AuthIMS(key));
         }
  
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
