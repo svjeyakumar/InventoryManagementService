@@ -5,10 +5,10 @@ namespace InventoryManagementSystemRepository.Repository.Interface
 {
     public interface ICustomers
     {
-        public void AddCustomer(Customers customer);
-        public void EditCustomer(Customers customer);
-        public Customers FindCustomerById(int Id);
-        public IEnumerable GetCustomerDetails();
-        public void RemoveCustomer(int Id);
+        public void AddInvoice(Customers customer);
+        public void EditInvoice(Customers customer);
+        public Customers FindInvoiceById(int Id);
+        public IEnumerable GetInvoiceDetails();
+        public void RemoveInvoice(int Id);
     }
 }

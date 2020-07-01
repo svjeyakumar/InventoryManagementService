@@ -16,13 +16,13 @@ namespace InventoryManagementSystemRepository.Repository
             _customerDBContext = cusDbContext;
         }
 
-        public void AddCustomer(Customers customer)
+        public void AddInvoice(Customers customer)
         {
             _customerDBContext.Customers.Add(customer);
             _customerDBContext.SaveChanges();
         }
 
-        public void EditCustomer(Customers customer)
+        public void EditInvoice(Customers customer)
         {
             var cust = _customerDBContext.Customers.AsNoTracking().Where(q => q.CustomerId == customer.CustomerId);
             foreach (var cus in cust)
@@ -42,18 +42,18 @@ namespace InventoryManagementSystemRepository.Repository
             _customerDBContext.SaveChanges();
         }
 
-        public Customers FindCustomerById(int Id)
+        public Customers FindInvoiceById(int Id)
         {
             var findcustomer = _customerDBContext.Customers.AsNoTracking().Where(p => p.CustomerId == Id).FirstOrDefault();
             return findcustomer;
         }
 
-        public IEnumerable GetCustomerDetails()
+        public IEnumerable GetInvoiceDetails()
         {
             return _customerDBContext.Customers.ToList();
         }
 
-        public void RemoveCustomer(int Id)
+        public void RemoveInvoice(int Id)
         {
             var removeCustomer = _customerDBContext.Customers.Where(c => c.CustomerId == Id).FirstOrDefault();
             _customerDBContext.Customers.Remove(removeCustomer);
