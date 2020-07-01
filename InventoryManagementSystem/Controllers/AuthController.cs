@@ -18,12 +18,12 @@ namespace InventoryManagementSystem.Controllers
     public class AuthController : ControllerBase
     {
         private readonly CustomerDbContext _cusDbContext;
-        private readonly IAuthIms _authIMS;
+        private readonly IAuthIms _authIms;
 
         public AuthController(CustomerDbContext cuDbContext,IAuthIms iauth)
         {
             _cusDbContext = cuDbContext;
-            _authIMS = iauth;
+            _authIms = iauth;
         }
         // GET: api/<AuthController>
         [HttpGet]
@@ -54,7 +54,7 @@ namespace InventoryManagementSystem.Controllers
             {
                 return Unauthorized();
             }
-            var token = _authIMS.Authenticate(user.Name, user.Password);
+            var token = _authIms.Authenticate(user.Name, user.Password);
             if(token == null)
             {
                 return Unauthorized();

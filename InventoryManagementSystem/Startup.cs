@@ -68,7 +68,7 @@ namespace InventoryManagementSystem
                     };
                 }
                 );
-            services.AddSingleton<IAuthIms>(new AuthIMS(key));
+            services.AddSingleton<IAuthIms>(new AuthIms(key));
         }
  
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
